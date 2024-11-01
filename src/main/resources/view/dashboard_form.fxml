@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBoardFormController">
+   <children>
+      <Label layoutX="444.0" layoutY="14.0" prefHeight="58.0" prefWidth="252.0" text="DASHBOARD" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="348.0">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
