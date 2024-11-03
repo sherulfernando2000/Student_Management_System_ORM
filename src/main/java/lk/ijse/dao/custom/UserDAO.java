@@ -1,4 +1,4 @@
 package lk.ijse.dao.custom;
 
-public class UserDAO {
+public interface UserDAO {
 }

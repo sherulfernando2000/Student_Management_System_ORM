@@ -1,4 +1,4 @@
 package lk.ijse.bo.custom;
 
-public interface LoginBO {
+public interface ProgramBO {
 }

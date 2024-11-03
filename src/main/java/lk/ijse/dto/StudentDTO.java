@@ -1,21 +1,16 @@
-package lk.ijse.entity;
+package lk.ijse.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-@Entity
-public class StudentTm {
-    @Id
+public class StudentDTO {
     private String s_id;
     private String s_name;
     private String address;
     private String contact_no;
     private String email;
 
-    public StudentTm() {
+    public StudentDTO() {
     }
 
-    public StudentTm(String s_id, String s_name, String address, String contact_no, String email) {
+    public StudentDTO(String s_id, String s_name, String address, String contact_no, String email) {
         this.s_id = s_id;
         this.s_name = s_name;
         this.address = address;
@@ -73,4 +68,5 @@ public class StudentTm {
                 ", email='" + email + '\'' +
                 '}';
     }
+
 }

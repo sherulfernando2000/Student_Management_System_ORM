@@ -1,4 +1,4 @@
 package lk.ijse.dao.custom;
 
-public class RegistrationDAO {
+public interface RegistrationDAO {
 }

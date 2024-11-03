@@ -1,15 +1,15 @@
-package lk.ijse.entity;
+package lk.ijse.dto;
 
-public class  Program {
+public class ProgramDTO {
     String pId;
     String pName;
     String duration;
     double fee;
 
-    public Program() {
+    public ProgramDTO() {
     }
 
-    public Program(String pId, String pName, String duration, double fee) {
+    public ProgramDTO(String pId, String pName, String duration, double fee) {
         this.pId = pId;
         this.pName = pName;
         this.duration = duration;

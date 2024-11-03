@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Student {
     @Id
-    private int s_id;
+    private String s_id;
     private String s_name;
     private String address;
     private String contact_no;
@@ -15,7 +15,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(int s_id, String s_name, String address, String contact_no, String email) {
+    public Student(String s_id, String s_name, String address, String contact_no, String email) {
         this.s_id = s_id;
         this.s_name = s_name;
         this.address = address;
@@ -23,11 +23,11 @@ public class Student {
         this.email = email;
     }
 
-    public int getS_id() {
+    public String getS_id() {
         return s_id;
     }
 
-    public void setS_id(int s_id) {
+    public void setS_id(String s_id) {
         this.s_id = s_id;
     }
 
