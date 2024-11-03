@@ -2,7 +2,7 @@ package lk.ijse.bo.custom.impl;
 
 import lk.ijse.dao.DAOFactory;
 import lk.ijse.dao.custom.ProgramDAO;
-import lk.ijse.dao.custom.programDAO;
+
 import lk.ijse.dto.ProgramDTO;
 import lk.ijse.dto.ProgramDTO;
 import lk.ijse.entity.Program;
