@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
+<AnchorPane prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UsersFormController">
    <children>
       <Label layoutX="488.0" prefHeight="58.0" prefWidth="129.0" text="USERS" AnchorPane.leftAnchor="488.0" AnchorPane.rightAnchor="533.0">
          <font>

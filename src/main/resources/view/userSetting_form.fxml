@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
+<AnchorPane prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserSettingFormController">
    <children>
       <Label layoutX="387.0" layoutY="1.0" prefHeight="58.0" prefWidth="326.0" text="USER SETTINGS" AnchorPane.leftAnchor="387.0" AnchorPane.rightAnchor="437.0">
          <font>

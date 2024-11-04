@@ -1,5 +1,6 @@
 package lk.ijse.bo;
 
+import lk.ijse.bo.custom.impl.ProgramBOImpl;
 import lk.ijse.bo.custom.impl.StudentBOImpl;
 import lk.ijse.entity.Student;
 
@@ -22,11 +23,10 @@ public class BOFactory {
             case Student:
                 return new StudentBOImpl();
 
-            /*case Item:
-                return  new ItemBOImpl();
+            case Programs:
+                return  new ProgramBOImpl();
 
-            case Orders:
-                return  new OrderBOImpl();*/
+
             default:
                 return null;
         }

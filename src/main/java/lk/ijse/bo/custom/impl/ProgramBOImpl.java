@@ -1,5 +1,6 @@
 package lk.ijse.bo.custom.impl;
 
+import lk.ijse.bo.custom.ProgramBO;
 import lk.ijse.dao.DAOFactory;
 import lk.ijse.dao.custom.ProgramDAO;
 
@@ -12,7 +13,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProgramBOImpl {
+public class ProgramBOImpl implements ProgramBO {
 
     ProgramDAO programDAO = (ProgramDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.Programs);
 
@@ -49,6 +50,12 @@ public class ProgramBOImpl {
 
     public boolean delete(String id){
         return programDAO.delete(id);
+    }
+
+    @Override
+    public ProgramDTO searchProgramByName(String name) {
+        Program program = programDAO.searchByName(name);
+       return new ProgramDTO(program.getpId(),program.getpName(),program.getDuration(),program.getFee());
     }
 
 

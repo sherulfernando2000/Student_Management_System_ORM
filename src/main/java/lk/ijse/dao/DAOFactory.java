@@ -1,5 +1,6 @@
 package lk.ijse.dao;
 
+import lk.ijse.dao.custom.impl.ProgramDAOImpl;
 import lk.ijse.dao.custom.impl.StudentDAOImpl;
 
 public class DAOFactory {
@@ -20,14 +21,10 @@ public class DAOFactory {
             case Student:
                 return new StudentDAOImpl();
 
-            /*case Item:
-                return new ItemDAOImpl();
+            case Programs:
+                return new ProgramDAOImpl();
 
-            case Orders:
-                return new OrderDAOImpl();
 
-            case OrderDetails:
-                return new OrderDetailsDAOImpl();*/
 
             default:
                 return null;

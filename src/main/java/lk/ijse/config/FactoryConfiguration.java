@@ -1,6 +1,7 @@
  package lk.ijse.config;
 
 
+import lk.ijse.entity.Program;
 import lk.ijse.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -35,6 +36,7 @@ import java.util.Properties;
 
         //add annotated class to configure
         configuration.addAnnotatedClass(Student.class);
+        configuration.addAnnotatedClass(Program.class);
 
         //build session factory
          sessionFactory = configuration.buildSessionFactory();

@@ -130,7 +130,7 @@ public class StudentFormController {
             boolean isSaved = studentBO.saveStudent(studentDTO);
             if (isSaved ) {
                 new Alert(Alert.AlertType.CONFIRMATION,"Student saved").show();
-                //loadAllCustomers();
+                loadAllStudents();
             }
         } catch (Exception e) {
            new Alert( Alert.AlertType.ERROR,e.getMessage()).show();

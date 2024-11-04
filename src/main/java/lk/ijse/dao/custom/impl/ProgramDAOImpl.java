@@ -3,6 +3,7 @@ package lk.ijse.dao.custom.impl;
 import javafx.scene.control.Alert;
 import lk.ijse.config.FactoryConfiguration;
 import lk.ijse.dao.custom.ProgramDAO;
+import lk.ijse.dto.ProgramDTO;
 import lk.ijse.entity.Program;
 import lk.ijse.entity.Student;
 import org.hibernate.HibernateException;
@@ -84,21 +85,38 @@ public class ProgramDAOImpl implements ProgramDAO {
         Query query = session.createQuery(hql);
         //String currentId = (String) query.uniqueResult();
         Integer id = (Integer) query.uniqueResult();
-        String currentId = id.toString();
-        System.out.println(currentId);
-        return currentId;
+        if(id == null){
+            return null;
+        }else {
+            String currentId = id.toString();
+            System.out.println(currentId);
+            return currentId;
+        }
     }
 
-    public Student searchId(String id) {
+    public Program searchId(String id) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction trancation = session.beginTransaction();
 
-        Query query = session.createQuery("from Student where s_id = ?1");
+        Query query = session.createQuery("from Program where pId = ?1");
         query.setParameter(1,id);
-        Student student = (Student)query.uniqueResult();
+        Program program = (Program) query.uniqueResult();
         trancation.commit();
         //session.close();
-        return student;
+        return program;
+    }
+
+    @Override
+    public Program searchByName(String name) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction trancation = session.beginTransaction();
+
+        Query query = session.createQuery("from Program where pName = ?1");
+        query.setParameter(1,name);
+        Program program = (Program) query.uniqueResult();
+        trancation.commit();
+        //session.close();
+        return program;
     }
 
 }

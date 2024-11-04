@@ -1,10 +1,22 @@
 package lk.ijse.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
 public class  Program {
+    @Id
     String pId;
     String pName;
     String duration;
     double fee;
+
+    @OneToMany(mappedBy = "program")
+    List<Registration> registrationList = new ArrayList<>();
 
     public Program() {
     }

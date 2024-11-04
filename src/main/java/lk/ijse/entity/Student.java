@@ -2,6 +2,10 @@ package lk.ijse.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Student {
@@ -11,6 +15,9 @@ public class Student {
     private String address;
     private String contact_no;
     private String email;
+
+    @OneToMany(mappedBy = "student")
+    List<Registration> registrationList = new ArrayList<>();
 
     public Student() {
     }
