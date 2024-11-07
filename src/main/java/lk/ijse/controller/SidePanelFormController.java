@@ -2,10 +2,13 @@ package lk.ijse.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.event.ActionEvent;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class SidePanelFormController {
     @FXML
@@ -14,10 +17,15 @@ public class SidePanelFormController {
     @FXML
     private AnchorPane childRootNode;
 
+    @FXML
+    private Label lblDate;
+
+
     public void initialize() throws IOException {
         AnchorPane dashRootNode = FXMLLoader.load(this.getClass().getResource("/view/dashboard_form.fxml"));
         childRootNode.getChildren().clear();
         childRootNode.getChildren().add(dashRootNode);
+        setDateTime();
 
     }
 
@@ -65,6 +73,14 @@ public class SidePanelFormController {
         }
         childRootNode.getChildren().clear();
         childRootNode.getChildren().add(dashRootNode);
+    }
+
+    private void setDateTime() {
+        LocalDate now = LocalDate.now();
+        lblDate.setText(String.valueOf(now));
+        /*LocalTime now1 = LocalTime.of(LocalTime.now().getHour(), LocalTime.now().getMinute());
+        lblOrderTime.setText(String.valueOf(now1));*/
+
     }
 
 

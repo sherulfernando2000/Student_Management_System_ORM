@@ -10,18 +10,18 @@
 
 <AnchorPane prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
    <children>
-      <Label layoutX="387.0" layoutY="1.0" prefHeight="58.0" prefWidth="222.0" text="REGI-DETAILS" AnchorPane.leftAnchor="387.0" AnchorPane.rightAnchor="332.0">
+      <Label layoutX="387.0" layoutY="1.0" prefHeight="58.0" prefWidth="316.0" styleClass="font" stylesheets="@../css/style.css" text="REGI-DETAILS" AnchorPane.leftAnchor="387.0" AnchorPane.rightAnchor="447.0">
          <font>
-            <Font name="System Bold" size="40.0" />
+            <Font name="System Bold Italic" size="40.0" />
          </font>
       </Label>
-      <Label layoutX="76.0" layoutY="96.0" prefHeight="34.0" prefWidth="202.0" text="Search By Student ID:" AnchorPane.leftAnchor="76.0">
+      <Label layoutX="76.0" layoutY="96.0" prefHeight="34.0" prefWidth="202.0" styleClass="font" stylesheets="@../css/style.css" text="Search By Student ID:" AnchorPane.leftAnchor="76.0">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="76.0" layoutY="131.0" prefHeight="34.0" prefWidth="431.0" style="-fx-border-radius: 20;" AnchorPane.leftAnchor="76.0" />
-      <TableView layoutX="76.0" layoutY="246.0" prefHeight="450.0" prefWidth="970.0" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="104.0">
+      <TextField layoutX="76.0" layoutY="131.0" prefHeight="34.0" prefWidth="431.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="76.0" />
+      <TableView layoutX="76.0" layoutY="246.0" prefHeight="450.0" prefWidth="970.0" stylesheets="@../css/style.css" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="104.0">
          <columns>
             <TableColumn prefWidth="212.0" text="Student ID" />
             <TableColumn prefWidth="360.0" text="Student Name" />
@@ -29,12 +29,12 @@
             <TableColumn prefWidth="180.0" text="UPFRONT PAYMENT" />
          </columns>
       </TableView>
-      <Button layoutX="76.0" layoutY="18.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="187.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Back">
+      <Button layoutX="76.0" layoutY="18.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="187.0" stylesheets="@../css/style.css" text="Back">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="84.0" layoutY="190.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="187.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="View All">
+      <Button layoutX="84.0" layoutY="190.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="187.0" stylesheets="@../css/style.css" text="View All">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

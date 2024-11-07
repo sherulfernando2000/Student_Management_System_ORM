@@ -90,4 +90,9 @@ public class RegistrationBOImpl implements RegistrationBO {
         }
 
     }
+
+    @Override
+    public int getCurrentRegistrationId() {
+        return registrationDAO.getCurrentId();
+    }
 }

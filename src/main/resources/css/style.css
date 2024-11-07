@@ -15,11 +15,64 @@
             #4C93FD 99.99%, /* Second color at 99.99% */
             rgba(86, 24, 230, 0.67) 100% /* Final color at 100% with opacity */
     );
+    -fx-text-fill: white;
 }/* Group 1 */
 
+.verticalBox{
+    /* Rectangle 8 */
+        -fx-background-color: linear-gradient(to right, #000000 12%, #25095C 63%, #4C93FD 106%);
+}
 
+.horizantalBox{
+    -fx-background-color: linear-gradient(to left, #000000 12%, #25095C 63%, #4C93FD 106%);
+}
 
+.transparent-button{
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+}
 
+.font{
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: #25095C;
+}
+
+.table-cell {
+    -fx-text-fill: #25095C;
+    -fx-alignment: center;             /* Centers the text */
+    -fx-font-size: 14px;               /* Sets the font size */
+    -fx-font-family: "Arial";
+
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to right,  #25095C 63%, #4C93FD 106%);
+    -fx-background-insets: 0 0 0 0;
+}
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+}
+.table-view .column-header .label{
+    -fx-text-fill: #fff;
+}
+
+.blue-text-Field{
+    -fx-border-radius: 5px;
+    -fx-background-color: #fff;
+    -fx-border-color: linear-gradient(to right,  #25095C 63%, #4C93FD 106%);
+    -fx-border-width:  0px 0px 2px 0px;
+    -fx-font-family: Arial Rounded MT Bold;
+    -fx-font-size: 14px;
+}
+.blue-box-text-field{
+    -fx-background-radius: 5px;
+    -fx-border-color: linear-gradient(to right,  #25095C 63%, #060a12 100%);
+    -fx-border-radius: 5px;
+    -fx-border-width:  2px;
+    -fx-text-fill: #000;
+    -fx-font-family: Arial Rounded MT Bold;
+    -fx-font-size: 14px;
+}
 
 
 /* Login */

@@ -84,9 +84,9 @@ public class RegistrationFormController {
 
     private void getCurrentRegistrationId() {
         try {
-           /* int currentId = registrationBO.getCurrentRegistrationId();
+            int currentId = registrationBO.getCurrentRegistrationId();
             String nextOrderId = generateNextOrderId(currentId);
-            lblRegisterId.setText(nextOrderId);*/
+            lblRegisterId.setText(nextOrderId);
 
         } catch (Exception e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
@@ -96,7 +96,7 @@ public class RegistrationFormController {
     }
 
     private String generateNextOrderId(int currentId) {
-        if(currentId == 0) {
+        if(currentId != 0) {
             /*String[] split = currentId.split("S-");  //" ", "2"
             int idNum = Integer.parseInt(split[1]);*/
             int idNum = currentId;
@@ -142,7 +142,9 @@ public class RegistrationFormController {
             ProgramDTO program = programBO.searchProgramByName(name);
             if (program != null) {
                 txtProgramId.setText(program.getpId());
+                lblProgrameFee.setText(String.valueOf(program.getFee()));
                 txtUpfrontPayment.requestFocus();
+
             }
 
             txtUpfrontPayment.requestFocus();

@@ -42,10 +42,12 @@ public class StudentDAOImpl implements StudentDAO {
         Query query = session.createQuery(hql);
         //String currentId = (String) query.uniqueResult();
         Integer id = (Integer) query.uniqueResult();
+        session.close();
         if(id != null){
             String currentId = id.toString();
             System.out.println(currentId);
             return currentId;
+
         }
         return null;
 
@@ -75,7 +77,7 @@ public class StudentDAOImpl implements StudentDAO {
         query.setParameter(1,id);
         Student student = (Student)query.uniqueResult();
         trancation.commit();
-        //session.close();
+        session.close();
         return student;
     }
 
@@ -86,6 +88,7 @@ public class StudentDAOImpl implements StudentDAO {
 
         Query query = session.createQuery("from Student ");
         List<Student> students = query.list();
+        session.close();
         return students;
     }
 

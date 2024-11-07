@@ -103,7 +103,7 @@ public class ProgramDAOImpl implements ProgramDAO {
         query.setParameter(1,id);
         Program program = (Program) query.uniqueResult();
         trancation.commit();
-        //session.close();
+        session.close();
         return program;
     }
 
@@ -116,7 +116,7 @@ public class ProgramDAOImpl implements ProgramDAO {
         query.setParameter(1,name);
         Program program = (Program) query.uniqueResult();
         trancation.commit();
-        //session.close();
+        session.close();
         return program;
     }
 

@@ -1,6 +1,8 @@
 package lk.ijse.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.Date;
 
@@ -12,6 +14,8 @@ public class Registration {
 
     //private String sId;
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
+
     private Student student;
 
     //private String pId;
@@ -25,6 +29,7 @@ public class Registration {
 //   private double totalPayment;
 
     public Registration() {
+
     }
 
     public Registration(/*int rId,*/ Student student, Program program, double upfrontpayment, Payment payment, String date /*,double totalPayment*/) {

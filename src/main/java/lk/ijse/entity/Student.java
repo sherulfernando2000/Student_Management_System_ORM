@@ -18,9 +18,17 @@ public class Student {
     private String email;
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
-    List<Registration> registrationList;
+     List<Registration> registrationList;
 
     public Student() {
+    }
+
+    public List<Registration> getRegistrationList() {
+        return registrationList;
+    }
+
+    public void setRegistrationList(List<Registration> registrationList) {
+        this.registrationList = registrationList;
     }
 
     /*public Student(String s_id, String s_name, String address, String contact_no, String email) {
