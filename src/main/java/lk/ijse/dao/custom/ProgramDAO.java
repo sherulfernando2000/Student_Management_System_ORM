@@ -4,6 +4,7 @@ import lk.ijse.dao.CrudDAO;
 import lk.ijse.dto.ProgramDTO;
 import lk.ijse.entity.Program;
 import lk.ijse.entity.Student;
+import org.hibernate.Session;
 
 import java.sql.SQLException;
 
@@ -13,4 +14,6 @@ public interface ProgramDAO  extends CrudDAO<Program> {
     public Program searchId(String id);
 
     Program searchByName(String name);
+
+
 }

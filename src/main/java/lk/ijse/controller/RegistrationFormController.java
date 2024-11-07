@@ -9,6 +9,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.ProgramBO;
+import lk.ijse.bo.custom.RegistrationBO;
 import lk.ijse.bo.custom.StudentBO;
 import lk.ijse.dto.ProgramDTO;
 import lk.ijse.dto.RegistrationDTO;
@@ -71,11 +72,39 @@ public class RegistrationFormController {
 
     ProgramBO programBO = (ProgramBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.Programs);
 
+    RegistrationBO registrationBO = (RegistrationBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.Registration);
+
     ObservableList<CartTm> obList = FXCollections.observableArrayList();
+
     public void initialize() {
         getProgramNames();
         setCellValueFactory();
+        getCurrentRegistrationId();
     }
+
+    private void getCurrentRegistrationId() {
+        try {
+           /* int currentId = registrationBO.getCurrentRegistrationId();
+            String nextOrderId = generateNextOrderId(currentId);
+            lblRegisterId.setText(nextOrderId);*/
+
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
+
+
+    }
+
+    private String generateNextOrderId(int currentId) {
+        if(currentId == 0) {
+            /*String[] split = currentId.split("S-");  //" ", "2"
+            int idNum = Integer.parseInt(split[1]);*/
+            int idNum = currentId;
+            return "R" + ++idNum;
+        }
+        return "R1";
+    }
+
 
     private void setCellValueFactory() {
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -143,11 +172,12 @@ public class RegistrationFormController {
 
         List<RegistrationDTO> registrationDTOList = new ArrayList<>();
 
+
         // Loop through each item in the table and create a RegistrationDTO for each
         for (CartTm cartTm : tblRegistration.getItems()) {
             // Assuming RegistrationDTO has a constructor that matches the parameters
             RegistrationDTO registrationDTO = new RegistrationDTO(
-                    lblRegisterId.getText(),           // Registration ID
+                    //lblRegisterId.getText(),           // Registration ID
                     txtStudentId.getText(),            // Student ID
                     cartTm.getId(),                    // Program ID
                     cartTm.getUpfrontpayment(),        // Upfront Payment
@@ -158,7 +188,7 @@ public class RegistrationFormController {
             registrationDTOList.add(registrationDTO);
         }
 
-        //registrationBO.placeRegister();
+        registrationBO.placeRegister(registrationDTOList);
     }
 
     @FXML

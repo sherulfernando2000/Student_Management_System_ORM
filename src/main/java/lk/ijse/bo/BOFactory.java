@@ -1,6 +1,7 @@
 package lk.ijse.bo;
 
 import lk.ijse.bo.custom.impl.ProgramBOImpl;
+import lk.ijse.bo.custom.impl.RegistrationBOImpl;
 import lk.ijse.bo.custom.impl.StudentBOImpl;
 import lk.ijse.entity.Student;
 
@@ -25,6 +26,9 @@ public class BOFactory {
 
             case Programs:
                 return  new ProgramBOImpl();
+
+            case Registration:
+                return  new RegistrationBOImpl();
 
 
             default:

@@ -10,7 +10,7 @@ public class Payment {
     private double upfrontpayment;
     private double balance;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private Registration registration;
 
     public Payment() {

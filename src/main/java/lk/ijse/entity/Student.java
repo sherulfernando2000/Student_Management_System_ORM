@@ -1,5 +1,6 @@
 package lk.ijse.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -16,18 +17,27 @@ public class Student {
     private String contact_no;
     private String email;
 
-    @OneToMany(mappedBy = "student")
-    List<Registration> registrationList = new ArrayList<>();
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
+    List<Registration> registrationList;
 
     public Student() {
     }
 
-    public Student(String s_id, String s_name, String address, String contact_no, String email) {
+    /*public Student(String s_id, String s_name, String address, String contact_no, String email) {
         this.s_id = s_id;
         this.s_name = s_name;
         this.address = address;
         this.contact_no = contact_no;
         this.email = email;
+    }*/
+
+    public Student(String s_id, String s_name, String address, String contact_no, String email,List<Registration> registrationList) {
+        this.s_id = s_id;
+        this.s_name = s_name;
+        this.address = address;
+        this.contact_no = contact_no;
+        this.email = email;
+        this.registrationList = registrationList;
     }
 
     public String getS_id() {

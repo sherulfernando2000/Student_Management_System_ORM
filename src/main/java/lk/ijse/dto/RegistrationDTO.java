@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collector;
 
 public class RegistrationDTO {
-    private String rid;
+    //private String rid;
     private String sid;
     private String pid;
     private double upfrontpayment;
@@ -14,21 +14,21 @@ public class RegistrationDTO {
     public RegistrationDTO() {
     }
 
-    public RegistrationDTO(String rid, String sid, String pid, double upfrontpayment, String date) {
-        this.rid = rid;
+    public RegistrationDTO(/*String rid,*/ String sid, String pid, double upfrontpayment, String date) {
+        //this.rid = rid;
         this.sid = sid;
         this.pid = pid;
         this.upfrontpayment = upfrontpayment;
         this.date = date;
     }
 
-    public String getRid() {
+   /* public String getRid() {
         return rid;
     }
 
     public void setRid(String rid) {
         this.rid = rid;
-    }
+    }*/
 
     public String getSid() {
         return sid;

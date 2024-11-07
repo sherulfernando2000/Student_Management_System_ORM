@@ -42,9 +42,13 @@ public class StudentDAOImpl implements StudentDAO {
         Query query = session.createQuery(hql);
         //String currentId = (String) query.uniqueResult();
         Integer id = (Integer) query.uniqueResult();
-        String currentId = id.toString();
-        System.out.println(currentId);
-        return currentId;
+        if(id != null){
+            String currentId = id.toString();
+            System.out.println(currentId);
+            return currentId;
+        }
+        return null;
+
     }
 
     public boolean update(Student entity) {

@@ -98,7 +98,7 @@ public class ProgramFormController {
     }
 
     @FXML
-    void btnDeleteOnAction(ActionEvent event) {
+    void btnDeleteOnAction(ActionEvent event) throws SQLException, ClassNotFoundException {
         String proId = lblProgramId.getText();
         boolean isDeleted = programBO.delete(proId);
         if (isDeleted){
@@ -126,6 +126,8 @@ public class ProgramFormController {
             if (isSaved ) {
                 new Alert(Alert.AlertType.CONFIRMATION,"Program saved").show();
                 loadAllPrograms();
+                getCurrentProgramId();
+                clearFields();
             }
         } catch (Exception e) {
             new Alert( Alert.AlertType.ERROR,e.getMessage()).show();

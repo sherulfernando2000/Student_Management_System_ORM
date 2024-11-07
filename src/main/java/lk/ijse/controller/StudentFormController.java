@@ -103,7 +103,7 @@ public class StudentFormController {
     }
 
     @FXML
-    void btnDeleteOnAction(ActionEvent event) {
+    void btnDeleteOnAction(ActionEvent event) throws SQLException, ClassNotFoundException {
         String stuId = lblStudentId.getText();
         boolean isDeleted = studentBO.delete(stuId);
         if (isDeleted){
@@ -131,6 +131,8 @@ public class StudentFormController {
             if (isSaved ) {
                 new Alert(Alert.AlertType.CONFIRMATION,"Student saved").show();
                 loadAllStudents();
+                getCurrentStudentId();
+                clearFields();
             }
         } catch (Exception e) {
            new Alert( Alert.AlertType.ERROR,e.getMessage()).show();

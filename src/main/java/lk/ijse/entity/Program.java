@@ -1,5 +1,6 @@
 package lk.ijse.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -15,8 +16,8 @@ public class  Program {
     String duration;
     double fee;
 
-    @OneToMany(mappedBy = "program")
-    List<Registration> registrationList = new ArrayList<>();
+    @OneToMany(mappedBy = "program", cascade = CascadeType.ALL, orphanRemoval = true)
+    List<Registration> registrationList;
 
     public Program() {
     }

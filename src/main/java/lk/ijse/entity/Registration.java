@@ -1,16 +1,14 @@
 package lk.ijse.entity;
 
-import jakarta.persistence.Basic;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
 public class Registration {
     @Id
-   private String rId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   private int rId;
 
     //private String sId;
     @ManyToOne
@@ -21,16 +19,16 @@ public class Registration {
     private Program program;
    private double upfrontpayment;
 
-   @ManyToOne
+   @OneToOne
    private Payment payment;
-   private Date date;
+   private String date;
 //   private double totalPayment;
 
     public Registration() {
     }
 
-    public Registration(String rId, Student student, Program program, double upfrontpayment, Payment payment, Date date /*,double totalPayment*/) {
-        this.rId = rId;
+    public Registration(/*int rId,*/ Student student, Program program, double upfrontpayment, Payment payment, String date /*,double totalPayment*/) {
+        //this.rId = rId;
         this.student = student;
         this.program = program;
         this.upfrontpayment = upfrontpayment;
@@ -39,11 +37,12 @@ public class Registration {
 //        this.totalPayment = totalPayment;
     }
 
-    public String getrId() {
+    public int getrId() {
         return rId;
     }
 
-    public void setrId(String rId) {
+
+    public void setrId(int rId) {
         this.rId = rId;
     }
 
@@ -79,11 +78,11 @@ public class Registration {
         this.payment = payment;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String  date) {
         this.date = date;
     }
 

@@ -15,7 +15,7 @@ public class StudentBOImpl implements StudentBO {
     StudentDAO studentDAO = (StudentDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.Student);
 
     public boolean saveStudent(StudentDTO studentDTO) {
-        return studentDAO.save( new Student(studentDTO.getS_id(),studentDTO.getS_name(), studentDTO.getAddress(),studentDTO.getContact_no(),studentDTO.getEmail()));
+        return studentDAO.save( new Student(studentDTO.getS_id(),studentDTO.getS_name(), studentDTO.getAddress(),studentDTO.getContact_no(),studentDTO.getEmail(),null));
     }
 
     public String getCurrentStudentId() throws SQLException {
@@ -23,7 +23,7 @@ public class StudentBOImpl implements StudentBO {
     }
 
     public boolean updateStudent(StudentDTO studentDTO) {
-        return studentDAO.update(new Student(studentDTO.getS_id(),studentDTO.getS_name(), studentDTO.getAddress(),studentDTO.getContact_no(),studentDTO.getEmail()));
+        return studentDAO.update(new Student(studentDTO.getS_id(),studentDTO.getS_name(), studentDTO.getAddress(),studentDTO.getContact_no(),studentDTO.getEmail(),null));
     }
 
     @Override
