@@ -21,6 +21,10 @@
 .button:hover{
     -fx-background-color: white;
     -fx-text-fill: #25095C;
+    -fx-border-color:  #25095C;
+    -fx-border-radius: 5px;
+
+
 }
 
 .button-logout{

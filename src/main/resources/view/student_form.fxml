@@ -6,12 +6,19 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1150.0" style="-fx-background-color: #afafaf" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
+<AnchorPane prefHeight="720.0" prefWidth="1150.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
    <children>
+      <ImageView fitHeight="302.0" fitWidth="464.0" layoutX="265.0" layoutY="45.0" opacity="0.47" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/undraw_Educator_re_ju47%20(1).png" />
+         </image>
+      </ImageView>
       <Label layoutX="387.0" layoutY="1.0" prefHeight="58.0" prefWidth="228.0" styleClass="font" stylesheets="@../css/style.css" text="STUDENTS" textFill="WHITE" AnchorPane.leftAnchor="387.0" AnchorPane.rightAnchor="535.0">
          <font>
             <Font name="System Bold Italic" size="40.0" />
@@ -60,15 +67,22 @@
             <TableColumn fx:id="colEmail" prefWidth="276.0" text="EMAIL" />
         </columns>
       </TableView>
-      <HBox layoutX="350.0" layoutY="305.0" prefHeight="42.0" prefWidth="700.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="100.0">
+      <HBox layoutX="380.0" layoutY="305.0" prefHeight="42.0" prefWidth="670.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="100.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="44.0" prefWidth="175.0" stylesheets="@../css/style.css" text="Save" textFill="WHITE">
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="44.0" prefWidth="175.0" stylesheets="@../css/style.css" text="Save" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
                <HBox.margin>
                   <Insets left="5.0" right="5.0" />
                </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0">
+                     <image>
+                        <Image url="@../icon/icons8-save-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="42.0" prefWidth="176.0" stylesheets="@../css/style.css" text="update" textFill="WHITE">
                <font>
@@ -77,6 +91,13 @@
                <HBox.margin>
                   <Insets left="5.0" right="5.0" />
                </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" translateX="-11.0">
+                     <image>
+                        <Image url="@../icon/icons8-update-24%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Button layoutX="145.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="42.0" prefWidth="178.0" stylesheets="@../css/style.css" text="Delete " textFill="WHITE">
                <font>
@@ -85,6 +106,13 @@
                <HBox.margin>
                   <Insets left="5.0" right="5.0" />
                </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" translateX="-15.0">
+                     <image>
+                        <Image url="@../icon/icons8-delete-30%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Button layoutX="280.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="42.0" prefWidth="179.0" stylesheets="@../css/style.css" text="Clear" textFill="WHITE">
                <font>
@@ -93,6 +121,13 @@
                <HBox.margin>
                   <Insets left="5.0" right="5.0" />
                </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" translateX="-23.0">
+                     <image>
+                        <Image url="@../icon/icons8-clear-50%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children>
       </HBox>
