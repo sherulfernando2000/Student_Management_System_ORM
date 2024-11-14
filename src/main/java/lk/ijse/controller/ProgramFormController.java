@@ -14,7 +14,7 @@ import lk.ijse.bo.custom.StudentBO;
 import lk.ijse.dto.ProgramDTO;
 import lk.ijse.dto.StudentDTO;
 import lk.ijse.entity.Program;
-import lk.ijse.entity.StudentTm;
+/*import lk.ijse.entity.StudentTm;*/
 import lk.ijse.tdm.tm.ProgramTm;
 
 import java.sql.SQLException;

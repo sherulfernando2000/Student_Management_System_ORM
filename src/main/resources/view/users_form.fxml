@@ -17,52 +17,17 @@
             <Font name="System Bold Italic" size="40.0" />
          </font>
       </Label>
-      <Label layoutX="30.0" layoutY="59.0" prefHeight="34.0" prefWidth="138.0" styleClass="font" stylesheets="@../css/style.css" text="User ID:" AnchorPane.leftAnchor="80.0">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="30.0" layoutY="93.0" prefHeight="34.0" prefWidth="399.0" styleClass="font" stylesheets="@../css/style.css" text="U001" AnchorPane.leftAnchor="80.0">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="659.0" layoutY="59.0" prefHeight="34.0" prefWidth="173.0" styleClass="font" stylesheets="@../css/style.css" text="User Name:" AnchorPane.rightAnchor="318.0">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <TextField layoutX="520.0" layoutY="93.0" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="100.0" />
-      <Label layoutX="30.0" layoutY="134.0" prefHeight="34.0" prefWidth="202.0" styleClass="font" stylesheets="@../css/style.css" text="User Password:" AnchorPane.leftAnchor="80.0">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <TextField layoutX="30.0" layoutY="168.0" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="80.0" />
-      <Label layoutX="659.0" layoutY="134.0" prefHeight="34.0" prefWidth="202.0" styleClass="font" stylesheets="@../css/style.css" text="User Email:" AnchorPane.rightAnchor="289.0">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <TextField layoutX="520.0" layoutY="168.0" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="100.0" />
-      <Label layoutX="30.0" layoutY="217.0" prefHeight="34.0" prefWidth="173.0" styleClass="font" stylesheets="@../css/style.css" text="Role:" AnchorPane.leftAnchor="80.0">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <TextField layoutX="30.0" layoutY="251.0" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="80.0" />
-      <TableView layoutX="80.0" layoutY="375.0" prefHeight="251.0" prefWidth="970.0" stylesheets="@../css/style.css" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="100.0">
+      <TableView fx:id="tblUser" layoutX="80.0" layoutY="211.0" onMouseClicked="#rowOnMouseClicked" prefHeight="415.0" prefWidth="970.0" stylesheets="@../css/style.css" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="100.0">
          <columns>
-            <TableColumn prefWidth="104.0" text="ID" />
-            <TableColumn prefWidth="198.0" text="NAME" />
-            <TableColumn prefWidth="196.0" text="PASSWORD" />
-            <TableColumn prefWidth="283.0" text="EMAIL" />
-            <TableColumn prefWidth="188.0" text="ROLE" />
+            <TableColumn fx:id="colName" prefWidth="268.0" text="NAME" />
+            <TableColumn fx:id="colPassword" prefWidth="212.0" text="PASSWORD" />
+            <TableColumn fx:id="colEmail" prefWidth="323.0" text="EMAIL" />
+            <TableColumn fx:id="colRole" prefWidth="166.0" text="ROLE" />
          </columns>
       </TableView>
-      <HBox layoutX="350.0" layoutY="305.0" prefHeight="42.0" prefWidth="700.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="100.0">
+      <HBox layoutX="499.0" layoutY="76.0" prefHeight="42.0" prefWidth="553.0" AnchorPane.leftAnchor="499.0" AnchorPane.rightAnchor="98.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="175.0" stylesheets="@../css/style.css" text="Save">
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="39.0" prefWidth="173.0" stylesheets="@../css/style.css" text="Add">
                <font>
                   <Font size="16.0" />
                </font>
@@ -70,7 +35,7 @@
                   <Insets left="5.0" right="5.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="176.0" stylesheets="@../css/style.css" text="update">
+            <Button fx:id="btnUpdate" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="176.0" stylesheets="@../css/style.css" text="update">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -78,15 +43,7 @@
                   <Insets left="5.0" right="5.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="145.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="178.0" stylesheets="@../css/style.css" text="Delete ">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="5.0" right="5.0" />
-               </HBox.margin>
-            </Button>
-            <Button layoutX="280.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="179.0" stylesheets="@../css/style.css" text="Clear">
+            <Button fx:id="btnDelete" layoutX="145.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="178.0" stylesheets="@../css/style.css" text="Delete ">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -96,5 +53,20 @@
             </Button>
          </children>
       </HBox>
+      <Button layoutX="80.0" layoutY="131.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="175.0" stylesheets="@../css/style.css" text="Search">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtUserSearch" layoutX="80.0" layoutY="76.0" prefHeight="42.0" prefWidth="413.0" promptText="🔍 search by user name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <Button layoutX="287.0" layoutY="131.0" mnemonicParsing="false" onAction="#btnViewAllOnAction" prefHeight="39.0" prefWidth="178.0" stylesheets="@../css/style.css" text="View all">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

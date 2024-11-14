@@ -3,6 +3,7 @@ package lk.ijse.bo;
 import lk.ijse.bo.custom.impl.ProgramBOImpl;
 import lk.ijse.bo.custom.impl.RegistrationBOImpl;
 import lk.ijse.bo.custom.impl.StudentBOImpl;
+import lk.ijse.bo.custom.impl.UserBOImpl;
 import lk.ijse.entity.Student;
 
 public class BOFactory {
@@ -29,6 +30,9 @@ public class BOFactory {
 
             case Registration:
                 return  new RegistrationBOImpl();
+
+            case Users:
+                return  new UserBOImpl();
 
 
             default:

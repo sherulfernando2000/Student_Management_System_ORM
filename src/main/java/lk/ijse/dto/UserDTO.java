@@ -1,21 +1,21 @@
-package lk.ijse.entity;
+package lk.ijse.dto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class UserDTO {
     @Id
-   private String userName;
+    private String userName;
 
-   private String password;
-   private String role;
-   private String email;
+    private String password;
+    private String role;
+    private String email;
 
-    public User() {
+    public UserDTO() {
     }
 
-    public User(String userName, String password, String role, String email) {
+    public UserDTO(String userName, String password, String role, String email) {
         this.userName = userName;
         this.password = password;
         this.role = role;

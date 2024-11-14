@@ -97,6 +97,7 @@
                <styleClass>
                   <String fx:value="transparent-button" />
                   <String fx:value="radius" />
+                  <String fx:value="button-logout" />
                </styleClass>
             </JFXButton>
          </children>

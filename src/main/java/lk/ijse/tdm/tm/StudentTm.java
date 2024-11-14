@@ -1,4 +1,4 @@
-package lk.ijse.entity;
+package lk.ijse.tdm.tm;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

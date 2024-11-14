@@ -167,6 +167,13 @@ public class RegistrationFormController {
         CartTm tm = new CartTm(pId, pName, fee, upfrontPay);
         obList.add(tm);
         tblRegistration.setItems(obList);
+        clearFields();
+    }
+
+    private void clearFields() {
+        txtProgramId.clear();
+        lblProgrameFee.setText("0/=");
+        txtUpfrontPayment.setText("");
     }
 
     @FXML

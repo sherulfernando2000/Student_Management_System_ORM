@@ -11,7 +11,7 @@ import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.StudentBO;
 import lk.ijse.config.FactoryConfiguration;
 import lk.ijse.dto.StudentDTO;
-import lk.ijse.entity.StudentTm;
+import lk.ijse.tdm.tm.StudentTm;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;

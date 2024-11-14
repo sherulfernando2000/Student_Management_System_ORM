@@ -18,6 +18,25 @@
     -fx-text-fill: white;
 }/* Group 1 */
 
+.button:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #25095C;
+}
+
+.button-logout{
+    -fx-background-color: linear-gradient(
+            to right, /* Specifies the direction of the gradient */
+            #25095C 13%, /* Starting color at 13% */
+            #4C93FD 99.99%, /* Second color at 99.99% */
+            rgba(86, 24, 230, 0.67) 100% /* Final color at 100% with opacity */
+    );
+    -fx-text-fill: white;
+}
+
+.button-logout:hover{
+    -fx-text-fill: red;
+}
+
 .verticalBox{
     /* Rectangle 8 */
         -fx-background-color: linear-gradient(to right, #000000 12%, #25095C 63%, #4C93FD 106%);
@@ -72,6 +91,20 @@
     -fx-text-fill: #000;
     -fx-font-family: Arial Rounded MT Bold;
     -fx-font-size: 14px;
+}
+
+.button:pressed {
+    -fx-background-color: #3333ff;  /* Darker color for active state */
+    -fx-text-fill: lightgrey;       /* Change text color if desired */
+    -fx-scale-x: 0.98;              /* Slightly shrink the button for effect */
+    -fx-scale-y: 0.98;
+}
+
+.button-active {
+    -fx-background-color: #3333ff;   /* Darker color for active state */
+    -fx-text-fill: lightgrey;        /* Optional: Change text color */
+    -fx-scale-x: 0.98;               /* Slightly shrink the button for effect */
+    -fx-scale-y: 0.98;
 }
 
 

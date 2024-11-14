@@ -2,13 +2,17 @@ package lk.ijse.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.event.ActionEvent;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Objects;
 
 public class SidePanelFormController {
     @FXML
@@ -36,7 +40,20 @@ public class SidePanelFormController {
 
     @FXML
     void btnLogoutOnAction(ActionEvent event) {
-        navigateTo("/view/login_form.fxml");
+        AnchorPane loadNode = null;
+        try {
+            loadNode = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/login_form.fxml")));
+            Scene scene = new Scene(loadNode);
+            Stage stage = (Stage) rootNode.getScene().getWindow();
+            stage.setScene(scene);
+            stage.setTitle("Login form");
+            stage.centerOnScreen();
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 
     @FXML
@@ -82,6 +99,9 @@ public class SidePanelFormController {
         lblOrderTime.setText(String.valueOf(now1));*/
 
     }
+
+
+
 
 
 }

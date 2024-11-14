@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="628.0" prefWidth="941.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SignUpFormController">
+   <children>
+      <ImageView fitHeight="628.0" fitWidth="941.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../icon/TECHNOLOGYX.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="482.0" layoutY="25.0" prefHeight="579.0" prefWidth="440.0" style="-fx-border-color: white;" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label layoutX="148.0" layoutY="5.0" prefHeight="58.0" prefWidth="173.0" text="SIGNUP" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="100.0" prefHeight="34.0" prefWidth="173.0" text="User Name:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUserName" layoutX="22.0" layoutY="134.0" prefHeight="34.0" prefWidth="391.0" style="-fx-border-radius: 20;" />
+            <Label layoutX="22.0" layoutY="172.0" prefHeight="34.0" prefWidth="202.0" text="Email:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="142.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnSignupOnAction" prefHeight="47.0" prefWidth="173.0" stylesheets="@../css/style.css" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="radius" />
+                  <String fx:value="radius" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+            <PasswordField fx:id="txtPassword" layoutX="22.0" layoutY="285.0" prefHeight="34.0" prefWidth="391.0" />
+            <Label layoutX="22.0" layoutY="251.0" prefHeight="34.0" prefWidth="202.0" text="Password:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtRePassword" layoutX="22.0" layoutY="368.0" prefHeight="34.0" prefWidth="391.0" />
+            <Label layoutX="22.0" layoutY="334.0" prefHeight="34.0" prefWidth="202.0" text="Re-Enter Password:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtAdminCode" layoutX="236.0" layoutY="444.0" prefHeight="34.0" prefWidth="173.0" />
+            <Label layoutX="236.0" layoutY="413.0" prefHeight="34.0" prefWidth="202.0" text="Admin code:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="536.0" prefHeight="34.0" prefWidth="221.0" text="Already have an account?" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="276.0" layoutY="536.0" onAction="#linkLoginOnAction" text="Login form">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Hyperlink>
+            <ComboBox fx:id="cmbAdminCoordinator" layoutX="22.0" layoutY="62.0" prefHeight="34.0" prefWidth="391.0" promptText="Admin or coordinator" stylesheets="@../css/style.css" />
+            <Label layoutX="22.0" layoutY="410.0" prefHeight="34.0" prefWidth="173.0" text="Admin Name:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAdminName" layoutX="22.0" layoutY="444.0" prefHeight="34.0" prefWidth="202.0" style="-fx-border-radius: 20;" />
+            <TextField fx:id="txtEmail" layoutX="22.0" layoutY="206.0" prefHeight="34.0" prefWidth="391.0" style="-fx-border-radius: 20;" />
+         </children>
+         <styleClass>
+            <String fx:value="transparent" />
+            <String fx:value="radius" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane layoutX="21.0" layoutY="25.0" prefHeight="579.0" prefWidth="450.0" style="-fx-border-color: white;" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="149.0" prefHeight="66.0" prefWidth="391.0" text="STUDENT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="42.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="33.0" layoutY="214.0" prefHeight="81.0" prefWidth="405.0" text="MANAGEMENT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="295.0" prefHeight="66.0" prefWidth="391.0" text="SYSTEM" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="transparent" />
+            <String fx:value="radius" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</AnchorPane>
