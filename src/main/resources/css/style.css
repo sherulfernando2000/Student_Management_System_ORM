@@ -111,6 +111,17 @@
     -fx-scale-y: 0.98;
 }
 
+.card{
+    -fx-background-color: linear-gradient(
+            to right, /* Specifies the direction of the gradient */
+            #25095C 13%, /* Starting color at 13% */
+            #4C93FD 99.99%, /* Second color at 99.99% */
+            rgba(86, 24, 230, 0.67) 100% /* Final color at 100% with opacity */
+    );
+    -fx-text-fill: white;
+    -fx-border-radius: 6,5;
+}
+
 
 /* Login */
 

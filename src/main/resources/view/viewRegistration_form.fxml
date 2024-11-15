@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
+<AnchorPane fx:id="rootNode" prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ViewRegistrationFormController">
    <children>
       <Label layoutX="387.0" layoutY="1.0" prefHeight="58.0" prefWidth="316.0" styleClass="font" stylesheets="@../css/style.css" text="REGI-DETAILS" AnchorPane.leftAnchor="387.0" AnchorPane.rightAnchor="447.0">
          <font>
@@ -20,21 +20,27 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="76.0" layoutY="131.0" prefHeight="34.0" prefWidth="431.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="76.0" />
-      <TableView layoutX="76.0" layoutY="246.0" prefHeight="450.0" prefWidth="970.0" stylesheets="@../css/style.css" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="104.0">
+      <TextField fx:id="txtSearchByStudentId" layoutX="76.0" layoutY="131.0" prefHeight="34.0" prefWidth="431.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="76.0" />
+      <TableView fx:id="tblREgiDetails" layoutX="76.0" layoutY="246.0" prefHeight="450.0" prefWidth="970.0" stylesheets="@../css/style.css" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="104.0">
          <columns>
-            <TableColumn prefWidth="212.0" text="Student ID" />
-            <TableColumn prefWidth="360.0" text="Student Name" />
-            <TableColumn prefWidth="217.0" text="FEE" />
-            <TableColumn prefWidth="180.0" text="UPFRONT PAYMENT" />
+            <TableColumn fx:id="colStudentId" prefWidth="141.0" text="Student ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="191.0" text="Student Name" />
+            <TableColumn fx:id="colCourseId" prefWidth="206.0" text="Course Id" />
+            <TableColumn fx:id="colCourseName" prefWidth="212.0" text="Course Name" />
+            <TableColumn fx:id="colUpfrontPayment" prefWidth="219.0" text="UPFRONT PAYMENT" />
          </columns>
       </TableView>
-      <Button layoutX="76.0" layoutY="18.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="187.0" stylesheets="@../css/style.css" text="Back">
+      <Button layoutX="76.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="34.0" prefWidth="187.0" stylesheets="@../css/style.css" text="Back">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="84.0" layoutY="190.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="187.0" stylesheets="@../css/style.css" text="View All">
+      <Button layoutX="284.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnViewAllOnAction" prefHeight="34.0" prefWidth="187.0" stylesheets="@../css/style.css" text="View All">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="76.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="34.0" prefWidth="187.0" stylesheets="@../css/style.css" text="Search">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

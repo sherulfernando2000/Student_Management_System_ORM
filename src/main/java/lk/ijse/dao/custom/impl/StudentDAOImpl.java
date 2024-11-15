@@ -112,6 +112,25 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
 
+    public List<Student> getStudentWithEnrolledPrograms(){
+        Session session = FactoryConfiguration.getInstance().getSession();
+
+        try {
+            String hql = "SELECT s FROM Student s " +
+                    "JOIN FETCH s.registrationList r " +
+                    "JOIN FETCH r.program p";
+
+            Query<Student> query = session.createQuery(hql);
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            session.close();
+        }
+
+
+    }
+
 
 
 }

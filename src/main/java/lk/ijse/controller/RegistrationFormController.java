@@ -4,9 +4,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.ProgramBO;
 import lk.ijse.bo.custom.RegistrationBO;
@@ -17,6 +19,7 @@ import lk.ijse.dto.StudentDTO;
 import lk.ijse.tdm.tm.CartTm;
 import lk.ijse.tdm.tm.ProgramTm;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -64,6 +67,9 @@ public class RegistrationFormController {
 
     @FXML
     private TextField txtUpfrontPayment;
+
+    @FXML
+    private AnchorPane rootNode;
 
     @FXML
     private DatePicker datePicker;
@@ -202,7 +208,14 @@ public class RegistrationFormController {
 
     @FXML
     void btnViewRegisOnAction(ActionEvent event) {
-
+        AnchorPane inNode = null;
+        try {
+            inNode = FXMLLoader.load(this.getClass().getResource("/view/viewRegistration_form.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        rootNode.getChildren().clear();
+        rootNode.getChildren().add(inNode);
     }
 
     @FXML

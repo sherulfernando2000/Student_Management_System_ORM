@@ -129,6 +129,6 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="childRootNode" layoutX="291.0" layoutY="72.0" prefHeight="628.0" prefWidth="941.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="259.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
+      <AnchorPane fx:id="childRootNode" layoutX="291.0" layoutY="72.0" prefHeight="628.0" prefWidth="941.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="259.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
    </children>
 </AnchorPane>

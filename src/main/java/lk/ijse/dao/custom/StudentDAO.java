@@ -13,6 +13,8 @@ public interface StudentDAO extends CrudDAO<Student> {
 
     public Student searchId(String id);
 
+    public List<Student> getStudentWithEnrolledPrograms();
+
 
 
 }

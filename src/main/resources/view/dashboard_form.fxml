@@ -1,15 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBoardFormController">
+<AnchorPane prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: whiite;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBoardFormController">
    <children>
-      <Label layoutX="444.0" layoutY="14.0" prefHeight="58.0" prefWidth="252.0" styleClass="font" stylesheets="@../css/style.css" text="DASHBOARD" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="348.0">
+      <ImageView fitHeight="710.0" fitWidth="1049.0" layoutX="26.0" layoutY="24.0" opacity="0.39" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/undraw_Educator_re_ju47%20(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="374.0" layoutY="14.0" prefHeight="58.0" prefWidth="252.0" styleClass="font" stylesheets="@../css/style.css" text="DASHBOARD" AnchorPane.leftAnchor="374.0" AnchorPane.rightAnchor="374.0">
          <font>
-            <Font name="System Bold Italic" size="40.0" />
+            <Font name="System Bold Italic" size="57.0" />
          </font>
       </Label>
+      <AnchorPane layoutX="31.0" layoutY="201.0" prefHeight="280.0" prefWidth="280.0" styleClass="card" stylesheets="@../css/style.css" AnchorPane.leftAnchor="31.0">
+         <children>
+            <Label alignment="CENTER" layoutX="41.0" layoutY="21.0" prefHeight="53.0" prefWidth="184.0" text="STUDENTS" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="73.0" layoutY="208.0" prefHeight="58.0" prefWidth="123.0" text="10" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="139.0" fitWidth="167.0" layoutX="65.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-user-60.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="413.0" layoutY="201.0" prefHeight="280.0" prefWidth="280.0" style="-fx-border-radius: 20px;" styleClass="card" stylesheets="@../css/style.css" AnchorPane.leftAnchor="413.0">
+         <children>
+            <Label alignment="CENTER" layoutX="17.0" layoutY="18.0" prefHeight="53.0" prefWidth="250.0" text="REGISTRATION" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="80.0" layoutY="205.0" prefHeight="58.0" prefWidth="123.0" text="10" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="139.0" fitWidth="167.0" layoutX="72.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-save-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="791.0" layoutY="201.0" prefHeight="280.0" prefWidth="280.0" styleClass="card" stylesheets="@../css/style.css" AnchorPane.rightAnchor="79.0">
+         <children>
+            <Label alignment="CENTER" layoutX="48.0" layoutY="4.0" prefHeight="53.0" prefWidth="184.0" text="PROGRAMS" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="77.0" layoutY="202.0" prefHeight="58.0" prefWidth="123.0" text="8" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="139.0" fitWidth="167.0" layoutX="68.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-courses-64.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -49,5 +49,8 @@ public class StudentBOImpl implements StudentBO {
         return studentDAO.delete(id);
     }
 
+    public List<Student> getStudentWithEnrolledPrograms(){
+        return studentDAO.getStudentWithEnrolledPrograms();
+    }
 
 }
