@@ -1,10 +1,12 @@
 package lk.ijse.dao.custom.impl;
 
 import javafx.scene.control.Alert;
+import lk.ijse.config.FactoryConfiguration;
 import lk.ijse.dao.custom.PaymentDAO;
 import lk.ijse.entity.Payment;
 import lk.ijse.entity.Program;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.util.List;
 
@@ -12,7 +14,18 @@ public class PaymentDAOImpl implements PaymentDAO {
 
     @Override
     public boolean save(Payment entity) {
-        return false;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Object payment = session.save(entity);
+        System.out.println(payment);
+
+        if (payment != null) {
+            transaction.commit();
+            session.close();
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @Override

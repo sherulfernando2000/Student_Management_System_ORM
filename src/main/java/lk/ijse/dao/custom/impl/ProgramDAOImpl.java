@@ -120,4 +120,23 @@ public class ProgramDAOImpl implements ProgramDAO {
         return program;
     }
 
+    public List<String> getProgramNamesByStudentId(String studentId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+
+        try {
+            // HQL Query
+            String hql = "SELECT r.program.pName " +
+                    "FROM Registration r " +
+                    "WHERE r.student.s_id = :studentId";
+
+            Query<String> query = session.createQuery(hql);
+            query.setParameter("studentId", studentId);
+
+            return query.getResultList();
+        } finally {
+            session.close();
+        }
+
+    }
+
 }

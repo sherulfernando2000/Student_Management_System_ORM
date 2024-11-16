@@ -58,5 +58,9 @@ public class ProgramBOImpl implements ProgramBO {
        return new ProgramDTO(program.getpId(),program.getpName(),program.getDuration(),program.getFee());
     }
 
+    public List<String> getProgramNamesByStudentId(String studentId){
+        return programDAO.getProgramNamesByStudentId(studentId);
+    }
+
 
 }

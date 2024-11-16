@@ -17,6 +17,17 @@ public class Student {
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY )
      List<Registration> registrationList;
 
+    @OneToMany
+    List<Payment> payments;
+
+    public List<Payment> getPayments() {
+        return payments;
+    }
+
+    public void setPayments(List<Payment> payments) {
+        this.payments = payments;
+    }
+
     public Student() {
     }
 
@@ -43,6 +54,16 @@ public class Student {
         this.contact_no = contact_no;
         this.email = email;
         this.registrationList = registrationList;
+    }
+
+    public Student(String s_id, String s_name, String address, String contact_no, String email,List<Registration> registrationList, List<Payment> payments) {
+        this.s_id = s_id;
+        this.s_name = s_name;
+        this.address = address;
+        this.contact_no = contact_no;
+        this.email = email;
+        this.registrationList = registrationList;
+        this.payments = payments;
     }
 
     public String getS_id() {

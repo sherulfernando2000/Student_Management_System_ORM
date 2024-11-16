@@ -1,9 +1,6 @@
 package lk.ijse.bo;
 
-import lk.ijse.bo.custom.impl.ProgramBOImpl;
-import lk.ijse.bo.custom.impl.RegistrationBOImpl;
-import lk.ijse.bo.custom.impl.StudentBOImpl;
-import lk.ijse.bo.custom.impl.UserBOImpl;
+import lk.ijse.bo.custom.impl.*;
 import lk.ijse.entity.Student;
 
 public class BOFactory {
@@ -17,7 +14,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-        Student, Programs,Registration, Users
+        Student, Programs,Registration, Users, Query, Payment
     }
 
     public SuperBO getBO(BOTypes boTypes){
@@ -33,6 +30,10 @@ public class BOFactory {
 
             case Users:
                 return  new UserBOImpl();
+
+            case Payment:
+                return  new PaymentBOImpl();
+
 
 
             default:

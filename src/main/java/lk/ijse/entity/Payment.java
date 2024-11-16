@@ -10,15 +10,25 @@ public class Payment {
     private double upfrontpayment;
     private double balance;
 
+    @ManyToOne
+    private Student student;
 
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
 
     public Payment() {
     }
 
-    public Payment(Integer id, double upfrontpayment, double balance) {
+    public Payment(Integer id, double upfrontpayment, double balance,Student student) {
         this.id = id;
         this.upfrontpayment = upfrontpayment;
         this.balance = balance;
+        this.student = student;
     }
 
     public Integer getId() {

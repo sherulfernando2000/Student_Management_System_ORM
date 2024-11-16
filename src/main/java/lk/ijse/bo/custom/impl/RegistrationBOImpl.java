@@ -39,8 +39,11 @@ public class RegistrationBOImpl implements RegistrationBO {
                 Program program = new Program();
                 program.setpId(registrationDTO.getPid());
 
+
+
                 Payment payment = new Payment();
                 payment.setUpfrontpayment(registrationDTO.getUpfrontpayment());
+                payment.setStudent(student);
 
                 Registration registration = new Registration(/*Integer.parseInt(registrationDTO.getRid() ),*/student,program,registrationDTO.getUpfrontpayment(), payment,registrationDTO.getDate());
                 registrationList.add(registration);

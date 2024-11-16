@@ -24,4 +24,6 @@ public interface ProgramBO extends SuperBO {
     public boolean delete(String id);
 
     ProgramDTO searchProgramByName(String name);
+
+    public List<String> getProgramNamesByStudentId(String studentId);
 }
