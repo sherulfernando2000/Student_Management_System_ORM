@@ -119,5 +119,14 @@
             <Image url="@../icon/icons8-add-50.png" />
          </image>
       </ImageView>
+      <Button layoutX="859.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnPaymentOnAction" prefHeight="34.0" prefWidth="187.0" stylesheets="@../css/style.css" text="Payment Form">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="button" />
+         </styleClass>
+      </Button>
    </children>
 </AnchorPane>

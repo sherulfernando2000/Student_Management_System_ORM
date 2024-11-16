@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="728.0" prefWidth="1150.0" style="-fx-background-color: #C7C8CC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PaymentFormController">
+   <children>
+      <Label layoutX="456.0" prefHeight="58.0" prefWidth="214.0" styleClass="font" stylesheets="@../css/style.css" text="PAYMENT" AnchorPane.leftAnchor="456.0" AnchorPane.rightAnchor="480.0">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="59.0" prefHeight="34.0" prefWidth="187.0" styleClass="font" stylesheets="@../css/style.css" text="Payment ID:" AnchorPane.leftAnchor="80.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRegisterId" layoutX="83.0" layoutY="88.0" prefHeight="15.0" prefWidth="399.0" styleClass="font" stylesheets="@../css/style.css" text="P- " AnchorPane.leftAnchor="83.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="659.0" layoutY="59.0" prefHeight="34.0" prefWidth="173.0" styleClass="font" stylesheets="@../css/style.css" text="Date:" AnchorPane.rightAnchor="318.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="157.0" prefHeight="34.0" prefWidth="202.0" styleClass="font" stylesheets="@../css/style.css" text="Student ID:" AnchorPane.leftAnchor="80.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStudentId" layoutX="80.0" layoutY="185.0" onAction="#txtStudentIdOnAction" prefHeight="27.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="80.0" />
+      <Label layoutX="660.0" layoutY="157.0" prefHeight="34.0" prefWidth="202.0" styleClass="font" stylesheets="@../css/style.css" text="Student Name:" AnchorPane.rightAnchor="288.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStudentName" layoutX="660.0" layoutY="186.0" prefHeight="27.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="99.0" />
+      <DatePicker fx:id="datePicker" layoutX="999.0" layoutY="89.0" onAction="#getDateOnAction" prefHeight="25.0" prefWidth="52.0" />
+      <Label layoutX="80.0" layoutY="129.0" prefHeight="34.0" prefWidth="187.0" styleClass="font" stylesheets="@../css/style.css" text="student details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Line endX="866.0" layoutX="177.0" layoutY="123.0" startX="-100.0" />
+      <Button layoutX="875.0" layoutY="624.0" mnemonicParsing="false" onAction="#btnPayOnAction" prefHeight="42.0" prefWidth="176.0" styleClass="radius" stylesheets="@../css/style.css" text="Pay">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="83.0" layoutY="227.0" prefHeight="34.0" prefWidth="176.0" styleClass="font" stylesheets="@../css/style.css" text="Program Name:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Line endX="866.0" layoutX="177.0" layoutY="316.0" startX="-100.0" />
+      <ComboBox fx:id="cmbProgramNames" layoutX="83.0" layoutY="261.0" onAction="#cmbProgramNamesOnAction" prefHeight="30.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
+      <Label layoutX="259.0" layoutY="347.0" prefHeight="34.0" prefWidth="176.0" styleClass="font" stylesheets="@../css/style.css" text="Program Fee:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="231.0" layoutY="395.0" prefHeight="34.0" prefWidth="176.0" styleClass="font" stylesheets="@../css/style.css" text="Upfront Payment:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProgramFee" layoutX="367.0" layoutY="349.0" prefHeight="27.0" prefWidth="350.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
+      <TextField fx:id="txtDate" layoutX="658.0" layoutY="88.0" prefHeight="27.0" prefWidth="370.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
+      <TextField fx:id="txtUpfrontPayment" layoutX="367.0" layoutY="397.0" prefHeight="27.0" prefWidth="350.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
+      <Label layoutX="276.0" layoutY="453.0" prefHeight="34.0" prefWidth="176.0" styleClass="font" stylesheets="@../css/style.css" text="Total paid:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTotalPaid" layoutX="367.0" layoutY="455.0" prefHeight="27.0" prefWidth="350.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
+      <Label layoutX="291.0" layoutY="502.0" prefHeight="34.0" prefWidth="176.0" styleClass="font" stylesheets="@../css/style.css" text="Balance:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBalance" layoutX="367.0" layoutY="504.0" prefHeight="27.0" prefWidth="350.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
+      <Label layoutX="243.0" layoutY="546.0" prefHeight="34.0" prefWidth="176.0" styleClass="font" stylesheets="@../css/style.css" text="Paying amount:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPayingAmount" layoutX="369.0" layoutY="548.0" prefHeight="27.0" prefWidth="350.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
+   </children>
+</AnchorPane>

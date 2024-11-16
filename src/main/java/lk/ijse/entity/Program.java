@@ -13,7 +13,7 @@ public class  Program {
     String duration;
     double fee;
 
-    @OneToMany(mappedBy = "program", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "program", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     List<Registration> registrationList;
 
     public Program() {

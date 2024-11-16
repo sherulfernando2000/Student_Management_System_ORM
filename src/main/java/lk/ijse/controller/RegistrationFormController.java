@@ -144,6 +144,7 @@ public class RegistrationFormController {
     @FXML
     void cmbProgramNamesOnAction(ActionEvent event) {
         String name = cmbProgramNames.getValue();
+        System.out.println(name);
         try {
             ProgramDTO program = programBO.searchProgramByName(name);
             if (program != null) {
@@ -246,6 +247,18 @@ public class RegistrationFormController {
     @FXML
     void txtStudentIdOnKeyReleased(KeyEvent event) {
 
+    }
+
+    @FXML
+    void btnPaymentOnAction(ActionEvent event) {
+        AnchorPane inNode = null;
+        try {
+            inNode = FXMLLoader.load(this.getClass().getResource("/view/payment_form.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        rootNode.getChildren().clear();
+        rootNode.getChildren().add(inNode);
     }
 
 }

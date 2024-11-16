@@ -14,7 +14,7 @@ public class Student {
     private String contact_no;
     private String email;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY )
      List<Registration> registrationList;
 
     public Student() {

@@ -89,7 +89,7 @@ public class ViewRegistrationFormController {
             System.out.println("Student: " + student.getS_name());
             for (Registration registration : student.getRegistrationList()) {
                 System.out.println("Enrolled in Program: " + registration.getProgram().getpName());
-                ViewRegiTm viewRegiTm = new ViewRegiTm(student.getS_id(),student.getS_name(),registration.getProgram().getpId(), registration.getProgram().getpName(),String.valueOf(registration.getProgram().getFee()));
+                ViewRegiTm viewRegiTm = new ViewRegiTm(student.getS_id(),student.getS_name(),registration.getProgram().getpId(), registration.getProgram().getpName(),String.valueOf(registration.getPayment().getUpfrontpayment()));
                 obList.add(viewRegiTm);
             }
         }
