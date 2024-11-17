@@ -79,12 +79,24 @@ public class PaymentFormController {
         boolean isSaved = paymentBO.savePayment(payment);
         if (isSaved) {
             new Alert(Alert.AlertType.INFORMATION, "Payment Saved", ButtonType.OK).show();
+            clearField();
+            clearProgramNamesWithoutTriggeringAction();
         }else {
             new Alert(Alert.AlertType.ERROR, "Payment Not Saved", ButtonType.OK).show();
         }
-
-
     }
+
+    public void clearProgramNamesWithoutTriggeringAction() {
+        // Temporarily remove the event handler
+        cmbProgramNames.setOnAction(null);
+
+        // Clear the ComboBox items
+        cmbProgramNames.getItems().clear();
+
+        // Reassign the original event handler
+        cmbProgramNames.setOnAction(this::cmbProgramNamesOnAction);
+    }
+
 
     @FXML
     void cmbProgramNamesOnAction(ActionEvent event) {
@@ -94,7 +106,7 @@ public class PaymentFormController {
         System.out.println(programName+studentId);
 
         Object[] programPaymentDetails = paymentBO.getProgramPaymentDetails(studentId, programName);
-        System.out.println(programPaymentDetails[0].toString());
+       // System.out.println(programPaymentDetails[0].toString());
 
         txtProgramFee.setText((String.valueOf(programPaymentDetails[0])));
         txtUpfrontPayment.setText(String.valueOf(programPaymentDetails[1]) );
@@ -157,6 +169,16 @@ public class PaymentFormController {
     @FXML
     void txtStudentIdOnKeyReleased(KeyEvent event) {
 
+    }
+
+    void clearField(){
+        txtStudentId.setText("");
+        txtStudentName.setText("");
+        txtProgramFee.setText("");
+        txtUpfrontPayment.setText("");
+        txtTotalPaid.setText("");
+        txtBalance.setText("");
+        txtPayingAmount.setText("");
     }
 
 }

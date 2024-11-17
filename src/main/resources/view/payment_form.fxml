@@ -21,7 +21,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblRegisterId" layoutX="83.0" layoutY="88.0" prefHeight="15.0" prefWidth="399.0" styleClass="font" stylesheets="@../css/style.css" text="P- " AnchorPane.leftAnchor="83.0">
+      <Label fx:id="lblRegisterId" layoutX="83.0" layoutY="88.0" prefHeight="15.0" prefWidth="399.0" styleClass="font" stylesheets="@../css/style.css" text="P- 10" AnchorPane.leftAnchor="83.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -43,7 +43,7 @@
          </font>
       </Label>
       <TextField fx:id="txtStudentName" layoutX="660.0" layoutY="186.0" prefHeight="27.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="99.0" />
-      <DatePicker fx:id="datePicker" layoutX="999.0" layoutY="89.0" onAction="#getDateOnAction" prefHeight="25.0" prefWidth="52.0" />
+      <DatePicker fx:id="datePicker" layoutX="660.0" layoutY="89.0" onAction="#getDateOnAction" prefHeight="25.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
       <Label layoutX="80.0" layoutY="129.0" prefHeight="34.0" prefWidth="187.0" styleClass="font" stylesheets="@../css/style.css" text="student details">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -73,7 +73,6 @@
          </font>
       </Label>
       <TextField fx:id="txtProgramFee" layoutX="367.0" layoutY="349.0" prefHeight="27.0" prefWidth="350.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
-      <TextField fx:id="txtDate" layoutX="658.0" layoutY="88.0" prefHeight="27.0" prefWidth="370.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
       <TextField fx:id="txtUpfrontPayment" layoutX="367.0" layoutY="397.0" prefHeight="27.0" prefWidth="350.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
       <Label layoutX="276.0" layoutY="453.0" prefHeight="34.0" prefWidth="176.0" styleClass="font" stylesheets="@../css/style.css" text="Total paid:">
          <font>
