@@ -91,6 +91,6 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtPayingAmount" layoutX="369.0" layoutY="548.0" prefHeight="27.0" prefWidth="350.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
+      <TextField fx:id="txtPayingAmount" layoutX="369.0" layoutY="548.0" onKeyReleased="#txtPayingAmountOnKeyReleased" prefHeight="27.0" prefWidth="350.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" />
    </children>
 </AnchorPane>

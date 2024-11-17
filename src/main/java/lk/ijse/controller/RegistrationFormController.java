@@ -18,6 +18,7 @@ import lk.ijse.dto.RegistrationDTO;
 import lk.ijse.dto.StudentDTO;
 import lk.ijse.tdm.tm.CartTm;
 import lk.ijse.tdm.tm.ProgramTm;
+import lk.ijse.util.Regex;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -260,5 +261,16 @@ public class RegistrationFormController {
         rootNode.getChildren().clear();
         rootNode.getChildren().add(inNode);
     }
+
+    @FXML
+    void txtPaymentOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.PRICE,txtUpfrontPayment);
+    }
+
+    public int isValied(){
+        if (!Regex.setTextColor(lk.ijse.util.TextField.PRICE,txtUpfrontPayment)) return 1;
+        return 0;
+    }
+
 
 }

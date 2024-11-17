@@ -39,25 +39,25 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtStudentName" layoutX="520.0" layoutY="93.0" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="100.0" />
+      <TextField fx:id="txtStudentName" layoutX="520.0" layoutY="93.0" onKeyReleased="#txtNameOnKeyReleased" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="100.0" />
       <Label layoutX="30.0" layoutY="134.0" prefHeight="34.0" prefWidth="202.0" styleClass="font" stylesheets="@../css/style.css" text="STUDENT ADDRESS:" textFill="WHITE" AnchorPane.leftAnchor="80.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtAddress" layoutX="30.0" layoutY="168.0" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="80.0" />
+      <TextField fx:id="txtAddress" layoutX="30.0" layoutY="168.0" onKeyReleased="#txtAddressOnKeyReleased" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="80.0" />
       <Label layoutX="659.0" layoutY="134.0" prefHeight="34.0" prefWidth="202.0" styleClass="font" stylesheets="@../css/style.css" text="STUDENT CONTACT:" textFill="WHITE" AnchorPane.rightAnchor="289.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtContact" layoutX="520.0" layoutY="168.0" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="100.0" />
+      <TextField fx:id="txtContact" layoutX="520.0" layoutY="168.0" onKeyReleased="#txtContactOnKeyReleased" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="100.0" />
       <Label layoutX="30.0" layoutY="217.0" prefHeight="34.0" prefWidth="173.0" styleClass="font" stylesheets="@../css/style.css" text="STUDENT EMAIL:" textFill="WHITE" AnchorPane.leftAnchor="80.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtEmail" layoutX="30.0" layoutY="251.0" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="80.0" />
+      <TextField fx:id="txtEmail" layoutX="30.0" layoutY="251.0" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="34.0" prefWidth="391.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="80.0" />
       <TableView fx:id="tblStudent" layoutX="80.0" layoutY="370.0" onMouseClicked="#rowOnMouseClicked" prefHeight="279.0" prefWidth="970.0" styleClass="font" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="100.0">
         <columns>
           <TableColumn fx:id="colId" prefWidth="104.0" text="ID" />

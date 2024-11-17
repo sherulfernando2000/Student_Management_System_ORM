@@ -31,7 +31,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtUserName" layoutX="22.0" layoutY="134.0" prefHeight="34.0" prefWidth="391.0" style="-fx-border-radius: 20;" />
+            <TextField fx:id="txtUserName" layoutX="22.0" layoutY="134.0" onKeyReleased="#txtNameOnKeyReleased" prefHeight="34.0" prefWidth="391.0" style="-fx-border-radius: 20;" />
             <Label layoutX="22.0" layoutY="172.0" prefHeight="34.0" prefWidth="202.0" text="Email:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
@@ -47,19 +47,19 @@
                   <String fx:value="button" />
                </styleClass>
             </Button>
-            <PasswordField fx:id="txtPassword" layoutX="22.0" layoutY="285.0" prefHeight="34.0" prefWidth="391.0" />
+            <PasswordField fx:id="txtPassword" layoutX="22.0" layoutY="285.0" onKeyReleased="#txtPassOnKeyReleased" prefHeight="34.0" prefWidth="391.0" />
             <Label layoutX="22.0" layoutY="251.0" prefHeight="34.0" prefWidth="202.0" text="Password:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <PasswordField fx:id="txtRePassword" layoutX="22.0" layoutY="368.0" prefHeight="34.0" prefWidth="391.0" />
+            <PasswordField fx:id="txtRePassword" layoutX="22.0" layoutY="368.0" onKeyReleased="#txtRePassOnKeyReleased" prefHeight="34.0" prefWidth="391.0" />
             <Label layoutX="22.0" layoutY="334.0" prefHeight="34.0" prefWidth="202.0" text="Re-Enter Password:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <PasswordField fx:id="txtAdminCode" layoutX="236.0" layoutY="444.0" prefHeight="34.0" prefWidth="173.0" />
+            <PasswordField fx:id="txtAdminCode" layoutX="236.0" layoutY="444.0" onKeyReleased="#txtAdminCodeOnKeyReleased" prefHeight="34.0" prefWidth="173.0" />
             <Label layoutX="236.0" layoutY="413.0" prefHeight="34.0" prefWidth="202.0" text="Admin code:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
@@ -81,8 +81,8 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtAdminName" layoutX="22.0" layoutY="444.0" prefHeight="34.0" prefWidth="202.0" style="-fx-border-radius: 20;" />
-            <TextField fx:id="txtEmail" layoutX="22.0" layoutY="206.0" prefHeight="34.0" prefWidth="391.0" style="-fx-border-radius: 20;" />
+            <TextField fx:id="txtAdminName" layoutX="22.0" layoutY="444.0" onKeyReleased="#txtAdminNameOnKeyReleased" prefHeight="34.0" prefWidth="202.0" style="-fx-border-radius: 20;" />
+            <TextField fx:id="txtEmail" layoutX="22.0" layoutY="206.0" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="34.0" prefWidth="391.0" style="-fx-border-radius: 20;" />
          </children>
          <styleClass>
             <String fx:value="transparent" />

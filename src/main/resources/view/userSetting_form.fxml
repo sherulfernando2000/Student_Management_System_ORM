@@ -30,19 +30,19 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUserName" layoutX="321.0" layoutY="172.0" prefHeight="34.0" prefWidth="549.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="101.0" />
+      <TextField fx:id="txtUserName" layoutX="321.0" layoutY="172.0" onKeyReleased="#txtNameOnKeyReleased" prefHeight="34.0" prefWidth="549.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="101.0" />
       <Label alignment="CENTER_RIGHT" layoutX="140.0" layoutY="266.0" prefHeight="34.0" prefWidth="181.0" styleClass="font" stylesheets="@../css/style.css" text="Current Password:">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCurrentPassword" layoutX="321.0" layoutY="266.0" prefHeight="34.0" prefWidth="728.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="101.0" />
+      <TextField fx:id="txtCurrentPassword" layoutX="321.0" layoutY="266.0" onKeyReleased="#txtCurrPassOnKeyReleased" prefHeight="34.0" prefWidth="728.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="101.0" />
       <Label alignment="CENTER_RIGHT" layoutX="140.0" layoutY="380.0" prefHeight="34.0" prefWidth="181.0" styleClass="font" stylesheets="@../css/style.css" text="New Password:">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNewPassword" layoutX="321.0" layoutY="380.0" prefHeight="34.0" prefWidth="728.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="101.0" />
+      <TextField fx:id="txtNewPassword" layoutX="321.0" layoutY="380.0" onKeyReleased="#txtNewPassOnKeyReleased" prefHeight="34.0" prefWidth="728.0" styleClass="blue-box-text-field" stylesheets="@../css/style.css" AnchorPane.rightAnchor="101.0" />
       <Button layoutX="521.0" layoutY="454.0" mnemonicParsing="false" onAction="#btnSaveChangesOnAction" prefHeight="42.0" prefWidth="256.0" stylesheets="@../css/style.css" text="Save Changes" AnchorPane.rightAnchor="373.0">
          <font>
             <Font name="System Bold" size="16.0" />

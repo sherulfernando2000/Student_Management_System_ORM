@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.bo.BOFactory;
@@ -16,6 +17,7 @@ import lk.ijse.dto.StudentDTO;
 import lk.ijse.entity.Program;
 /*import lk.ijse.entity.StudentTm;*/
 import lk.ijse.tdm.tm.ProgramTm;
+import lk.ijse.util.Regex;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -121,17 +123,36 @@ public class ProgramFormController {
 
         ProgramDTO programDTO = new ProgramDTO(proId,proName,duration,Double.parseDouble(fee));
 
-        try {
-            boolean isSaved = programBO.saveProgram(programDTO);
-            if (isSaved ) {
-                new Alert(Alert.AlertType.CONFIRMATION,"Program saved").show();
-                loadAllPrograms();
-                getCurrentProgramId();
-                clearFields();
-            }
-        } catch (Exception e) {
-            new Alert( Alert.AlertType.ERROR,e.getMessage()).show();
+        switch (isValied()){
+            case 0:
+                try {
+                    boolean isSaved = programBO.saveProgram(programDTO);
+                    if (isSaved ) {
+                        new Alert(Alert.AlertType.CONFIRMATION,"Program saved").show();
+                        loadAllPrograms();
+                        getCurrentProgramId();
+                        clearFields();
+                    }
+                } catch (Exception e) {
+                    new Alert( Alert.AlertType.ERROR,e.getMessage()).show();
+                };
+             break;
+
+            case 1:
+                new Alert(Alert.AlertType.ERROR,"Invalid type for program name").show();
+                break;
+
+            case 2:
+                new Alert(Alert.AlertType.ERROR,"Invalid duration ").show();
+                break;
+
+            case 3:
+                new Alert(Alert.AlertType.ERROR,"Invalid fee should be in decimal").show();
+                break;
+
         }
+
+
 
     }
 
@@ -209,6 +230,29 @@ public class ProgramFormController {
         txtDuration.setText("");
         txtFee.setText("");
 
+    }
+
+    @FXML
+    void txtDurationOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.ADDRESS,txtDuration);
+    }
+
+    @FXML
+    void txtFeeOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.PRICE,txtFee);
+    }
+
+    @FXML
+    void txtNameOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.NAME,txtProgramName);
+    }
+
+    public int isValied(){
+        if (!Regex.setTextColor(lk.ijse.util.TextField.NAME,txtProgramName)) return 1;
+        if (!Regex.setTextColor(lk.ijse.util.TextField.ADDRESS,txtDuration)) return 2;
+        if (!Regex.setTextColor(lk.ijse.util.TextField.PRICE,txtFee)) return 3;
+
+        return 0;
     }
 
 

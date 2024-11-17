@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 
 public class Regex {
-    public static boolean isTextFieldValid(lk.ijse.Util.TextField textField, String text){
+    public static boolean isTextFieldValid(lk.ijse.util.TextField textField, String text){
         String filed = "";
 
         switch (textField){
@@ -71,7 +71,7 @@ public class Regex {
         return false;
     }
 
-    public static boolean setTextColor(lk.ijse.Util.TextField location, TextField textField){
+    public static boolean setTextColor(lk.ijse.util.TextField location, TextField textField){
         if (Regex.isTextFieldValid(location, textField.getText())){
             textField.setStyle("-fx-border-color: green;");
             //textField.setStyle("-fx-");

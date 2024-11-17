@@ -19,6 +19,8 @@ import lk.ijse.dto.StudentDTO;
 import lk.ijse.entity.Student;
 import lk.ijse.entity.User;
 import lk.ijse.util.PasswordUtil;
+import javafx.scene.input.KeyEvent;
+import lk.ijse.util.Regex;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -87,25 +89,49 @@ public class SignUpFormController {
 
         User user = userBO.searchUserbyName(adminNameText);
 
+        switch (isValied()){
+            case 0:if (passwordText.equals(rePasswordText)) {
+                if (user!= null) {
+                    boolean isPassCorrect = PasswordUtil.verifyPassword(adminCodeText, user.getPassword());
+                    if (isPassCorrect) {
+                        User userDTO  = new User(userNameText,hasedPass,userType,emailText);
+                        boolean isSaved = userBO.saveUser(userDTO);
+                        new Alert(Alert.AlertType.CONFIRMATION, "user  saved").show();
+                    }else{
+                        new Alert(Alert.AlertType.ERROR, "user not saved.Enter valid admin code").show();
+                    }
 
-        if (passwordText.equals(rePasswordText)) {
-            if (user!= null) {
-                boolean isPassCorrect = PasswordUtil.verifyPassword(adminCodeText, user.getPassword());
-                if (isPassCorrect) {
-                    User userDTO  = new User(userNameText,hasedPass,userType,emailText);
-                    boolean isSaved = userBO.saveUser(userDTO);
-                    new Alert(Alert.AlertType.ERROR, "user  saved").show();
                 }else{
-                    new Alert(Alert.AlertType.ERROR, "user not saved.Enter valid admin code").show();
+                    new Alert(Alert.AlertType.ERROR, "Admin Name not found please enter valid admin name").show();
                 }
 
-            }else{
-                new Alert(Alert.AlertType.ERROR, "Admin Name not found please enter valid admin name").show();
+            }else {
+                new Alert(Alert.AlertType.ERROR, "Passwords do not match").show();
             }
+            break;
 
-        }else {
-            new Alert(Alert.AlertType.ERROR, "Passwords do not match").show();
+            case 1:
+                new Alert(Alert.AlertType.ERROR,"Invalid UserName").show();
+                break;
+
+            case 2:
+                new Alert(Alert.AlertType.ERROR,"Invalid Email").show();
+                break;
+
+            case 3:
+                new Alert(Alert.AlertType.ERROR,"Invalid Password").show();
+                break;
+
+            case 4:
+                new Alert(Alert.AlertType.ERROR,"Invalid Password").show();
+                break;
+
+
         }
+
+
+
+
 
 
     }
@@ -120,5 +146,46 @@ public class SignUpFormController {
         stage.centerOnScreen();
         stage.setTitle("Login Page");
     }
+
+    @FXML
+    void txtAdminCodeOnKeyReleased(KeyEvent event) {
+
+    }
+
+    @FXML
+    void txtAdminNameOnKeyReleased(KeyEvent event) {
+       //Regex.setTextColor(lk.ijse.util.TextField.NAME,txtAdminName);
+    }
+
+    @FXML
+    void txtEmailOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.EMAIL,txtEmail);
+    }
+
+    @FXML
+    void txtNameOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.NAME,txtUserName);
+    }
+
+    @FXML
+    void txtPassOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.PASSWORD,txtPassword);
+    }
+
+    @FXML
+    void txtRePassOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.PASSWORD,txtRePassword);
+    }
+
+
+    public int isValied(){
+        if (!Regex.setTextColor(lk.ijse.util.TextField.NAME,txtUserName)) return 1;
+        if (!Regex.setTextColor(lk.ijse.util.TextField.EMAIL,txtEmail)) return 2;
+        if (!Regex.setTextColor(lk.ijse.util.TextField.PASSWORD,txtPassword)) return 3;
+        if (!Regex.setTextColor(lk.ijse.util.TextField.PASSWORD,txtRePassword)) return 4;
+        return 0;
+    }
+
+
 
 }

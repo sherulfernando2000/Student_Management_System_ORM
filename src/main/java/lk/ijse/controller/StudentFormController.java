@@ -6,12 +6,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.StudentBO;
 import lk.ijse.config.FactoryConfiguration;
 import lk.ijse.dto.StudentDTO;
 import lk.ijse.tdm.tm.StudentTm;
+import lk.ijse.util.Regex;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -126,17 +128,40 @@ public class StudentFormController {
 
         StudentDTO studentDTO = new StudentDTO(stuId,stuName,stuAddress,stuContact,stuEmail);
 
-        try {
-            boolean isSaved = studentBO.saveStudent(studentDTO);
-            if (isSaved ) {
-                new Alert(Alert.AlertType.CONFIRMATION,"Student saved").show();
-                loadAllStudents();
-                getCurrentStudentId();
-                clearFields();
-            }
-        } catch (Exception e) {
-           new Alert( Alert.AlertType.ERROR,e.getMessage()).show();
+        switch (isValied()){
+            case 0: try {
+                boolean isSaved = studentBO.saveStudent(studentDTO);
+                if (isSaved ) {
+                    new Alert(Alert.AlertType.CONFIRMATION,"Student saved").show();
+                    loadAllStudents();
+                    getCurrentStudentId();
+                    clearFields();
+                }
+            } catch (Exception e) {
+                new Alert( Alert.AlertType.ERROR,e.getMessage()).show();
+            };
+            break;
+
+            case 1:
+                new Alert(Alert.AlertType.ERROR,"Invalid name ").show();
+                break;
+
+            case 2:
+                new Alert(Alert.AlertType.ERROR,"Invalid contact number").show();
+                break;
+
+            case 3:
+                new Alert(Alert.AlertType.ERROR,"Invalid email").show();
+                break;
+
+            case 4:
+                new Alert(Alert.AlertType.ERROR,"Invalid address").show();
+                break;
+
+
         }
+
+
 
 
     }
@@ -213,6 +238,34 @@ public class StudentFormController {
         txtContact.setText("");
         txtEmail.setText("");
         txtAddress.setText("");
+    }
+
+    @FXML
+    void txtAddressOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.ADDRESS ,txtAddress);
+    }
+
+    @FXML
+    void txtContactOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.PHONENO,txtContact);
+    }
+
+    @FXML
+    void txtEmailOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.EMAIL,txtEmail);
+    }
+
+    @FXML
+    void txtNameOnKeyReleased(KeyEvent event) {
+        Regex.setTextColor(lk.ijse.util.TextField.NAME,txtStudentName);
+    }
+
+    public int isValied(){
+        if (!Regex.setTextColor(lk.ijse.util.TextField.NAME,txtStudentName)) return 1;
+        if (!Regex.setTextColor(lk.ijse.util.TextField.PHONENO,txtContact)) return 2;
+        if (!Regex.setTextColor(lk.ijse.util.TextField.EMAIL,txtEmail)) return 3;
+        if (!Regex.setTextColor(lk.ijse.util.TextField.ADDRESS,txtAddress)) return 4;
+        return 0;
     }
 
 

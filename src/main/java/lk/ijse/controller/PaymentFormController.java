@@ -181,5 +181,10 @@ public class PaymentFormController {
         txtPayingAmount.setText("");
     }
 
+    @FXML
+    void txtPayingAmountOnKeyReleased(KeyEvent event) {
+
+    }
+
 }
 
