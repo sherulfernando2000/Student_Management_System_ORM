@@ -21,4 +21,8 @@ public interface UserBO extends SuperBO {
     boolean deleteUser(String userName);
 
     boolean updateUserPassword(String newpassword, String userName);
+
+    boolean updateUser(User user);
+    public boolean updateUser(User user, String firstUserName);
+
 }

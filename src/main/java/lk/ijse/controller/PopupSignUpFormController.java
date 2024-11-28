@@ -114,6 +114,25 @@ public class PopupSignUpFormController {
         if (userSelected != null) {
             txtUserName.setText(userSelected.getUserName());
             txtEmail.setText(userSelected.getEmail());
+
+            String firstUserName = userSelected.getUserName();
+            String userName = txtUserName.getText();
+            String email = txtEmail.getText();
+
+            User user  = new User();
+            user.setUserName(userName);
+            user.setEmail(email);
+
+            boolean isUpdated = userBO.updateUser(user,firstUserName);
+            if (isUpdated) {
+                new Alert(Alert.AlertType.INFORMATION, "user updated").show();
+                usersFormController.loadAllUsers();
+            }else {
+                new Alert(Alert.AlertType.ERROR,"user not updated").show();
+            }
+
+
+
         }
 
 

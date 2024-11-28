@@ -37,6 +37,28 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
+    public boolean update(User entity, String firstUserName) {
+
+        System.out.println(entity.getUserName()+""+firstUserName+entity.getEmail());
+
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("update User set userName = ?1, email = ?2  where userName = ?3");
+        query.setParameter(1, entity.getUserName());
+        query.setParameter(2, entity.getEmail());
+        query.setParameter(3, firstUserName);
+
+        boolean isupdated = query.executeUpdate()>0;
+        transaction.commit();
+        session.close();
+        return isupdated;
+
+
+
+    }
+
+    @Override
     public boolean delete(String id) {
         try {
             Session session = FactoryConfiguration.getInstance().getSession();

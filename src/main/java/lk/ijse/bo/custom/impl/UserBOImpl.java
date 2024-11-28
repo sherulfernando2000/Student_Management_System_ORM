@@ -53,4 +53,14 @@ public class UserBOImpl implements UserBO {
 
         return userDAO.updatePassword(newpassword, userName);
     }
+
+    @Override
+    public boolean updateUser(User user) {
+        return false;
+    }
+
+    @Override
+    public boolean updateUser(User user, String firstUserName) {
+        return userDAO.update(user,firstUserName);
+    }
 }

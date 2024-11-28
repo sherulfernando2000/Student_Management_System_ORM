@@ -15,7 +15,7 @@ import java.util.List;
 public class RegistrationDAOImpl implements RegistrationDAO {
 
     @Override
-    public boolean saveRegistration(List<Registration> registrationList, Session session) {
+    public boolean  saveRegistration(List<Registration> registrationList, Session session) {
 
         try {
             for (Registration registration:registrationList){
