@@ -17,7 +17,7 @@ public class Student {
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY )
      List<Registration> registrationList;
 
-    @OneToMany
+    @OneToMany( cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY ) //
     List<Payment> payments;
 
     public List<Payment> getPayments() {

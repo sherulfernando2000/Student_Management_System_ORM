@@ -109,7 +109,7 @@ public class StudentFormController {
         String stuId = lblStudentId.getText();
         boolean isDeleted = studentBO.delete(stuId);
         if (isDeleted){
-            new Alert(Alert.AlertType.CONFIRMATION,"customer deleted").show();
+            new Alert(Alert.AlertType.CONFIRMATION,"Student deleted").show();
             loadAllStudents();
             clearFields();
             getCurrentStudentId();

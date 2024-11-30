@@ -48,7 +48,7 @@ public class RegistrationDAOImpl implements RegistrationDAO {
             return id;
 
         }
-        return id;
+        return 0;
     }
 
 

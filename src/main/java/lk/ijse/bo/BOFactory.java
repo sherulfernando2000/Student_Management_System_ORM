@@ -14,7 +14,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-        Student, Programs,Registration, Users, Query, Payment
+        Student, Programs,Registration, Users, Query, Payment,DashBoard
     }
 
     public SuperBO getBO(BOTypes boTypes){
@@ -33,6 +33,9 @@ public class BOFactory {
 
             case Payment:
                 return  new PaymentBOImpl();
+
+            case DashBoard:
+                return  new DashBoardBOImpl();
 
 
 

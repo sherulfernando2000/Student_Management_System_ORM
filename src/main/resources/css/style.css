@@ -27,6 +27,11 @@
 
 }
 
+.buttonFrom:hover{
+    -fx-background-color: #4C93FD;
+    -fx-border-color:  #4C93FD;
+}
+
 .button-logout{
     -fx-background-color: linear-gradient(
             to right, /* Specifies the direction of the gradient */

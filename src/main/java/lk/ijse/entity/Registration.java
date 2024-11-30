@@ -24,6 +24,7 @@ public class Registration {
    private double upfrontpayment;
 
    @OneToOne
+   @OnDelete(action = OnDeleteAction.CASCADE) //
    private Payment payment;
    private String date;
 //   private double totalPayment;

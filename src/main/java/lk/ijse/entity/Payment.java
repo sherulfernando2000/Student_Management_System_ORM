@@ -1,6 +1,8 @@
 package lk.ijse.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 public class Payment {
@@ -10,7 +12,9 @@ public class Payment {
     private double upfrontpayment;
     private double balance;
 
+
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Student student;
 
     public Student getStudent() {

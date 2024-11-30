@@ -25,7 +25,7 @@
                   <Font name="System Bold" size="32.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="73.0" layoutY="208.0" prefHeight="58.0" prefWidth="123.0" text="10" textFill="WHITE">
+            <Label fx:id="lblStudent" alignment="CENTER" layoutX="73.0" layoutY="208.0" prefHeight="58.0" prefWidth="123.0" text="10" textFill="WHITE">
                <font>
                   <Font size="36.0" />
                </font>
@@ -44,7 +44,7 @@
                   <Font name="System Bold" size="32.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="80.0" layoutY="205.0" prefHeight="58.0" prefWidth="123.0" text="10" textFill="WHITE">
+            <Label fx:id="lblRegistration" alignment="CENTER" layoutX="80.0" layoutY="205.0" prefHeight="58.0" prefWidth="123.0" text="10" textFill="WHITE">
                <font>
                   <Font size="36.0" />
                </font>
@@ -63,7 +63,7 @@
                   <Font name="System Bold" size="32.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="77.0" layoutY="202.0" prefHeight="58.0" prefWidth="123.0" text="8" textFill="WHITE">
+            <Label fx:id="lblPrograms" alignment="CENTER" layoutX="77.0" layoutY="202.0" prefHeight="58.0" prefWidth="123.0" text="8" textFill="WHITE">
                <font>
                   <Font size="36.0" />
                </font>

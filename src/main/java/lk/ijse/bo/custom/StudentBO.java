@@ -22,4 +22,5 @@ public interface StudentBO extends SuperBO {
 
     public List<Student> getStudentWithEnrolledPrograms();
 
+
 }

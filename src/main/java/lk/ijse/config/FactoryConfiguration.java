@@ -25,7 +25,7 @@ import java.util.Properties;
 
         //add already created hibernate file to properies in current thread
         try {
-            properties.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("hibernate.properties"));   //set path
+            properties.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("hibernate.properties"));   //set path file is found no matter where the code is running
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

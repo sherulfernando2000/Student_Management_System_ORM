@@ -166,6 +166,10 @@ public class UsersFormController {
         controller.setUsersFormController(this);// Pass UsersFormController instance
         controller.popupinitialize();
         controller.btnSignup.setDisable(true);
+        controller.txtPassword.setDisable(true);
+        controller.txtRePassword.setDisable(true);
+
+
 
         Scene scene = new Scene(rootNode);
         Stage stage = new Stage();

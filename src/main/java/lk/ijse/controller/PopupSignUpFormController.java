@@ -20,19 +20,19 @@ public class PopupSignUpFormController {
     private AnchorPane rootNode;
 
     @FXML
-    private PasswordField txtAdminCode;
+    public PasswordField txtAdminCode;
 
     @FXML
-    private TextField txtAdminName;
+    public TextField txtAdminName;
 
     @FXML
     private TextField txtEmail;
 
     @FXML
-    private PasswordField txtPassword;
+    public PasswordField txtPassword;
 
     @FXML
-    private PasswordField txtRePassword;
+    public PasswordField txtRePassword;
 
     @FXML
     private TextField txtUserName;
@@ -112,8 +112,6 @@ public class PopupSignUpFormController {
     void btnUpdateOnAction(ActionEvent event) {
         User userSelected = usersFormController.userSelected;
         if (userSelected != null) {
-            txtUserName.setText(userSelected.getUserName());
-            txtEmail.setText(userSelected.getEmail());
 
             String firstUserName = userSelected.getUserName();
             String userName = txtUserName.getText();

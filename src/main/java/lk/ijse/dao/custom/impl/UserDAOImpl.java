@@ -127,9 +127,17 @@ public class UserDAOImpl implements UserDAO {
         Transaction transaction = session.beginTransaction();
 
         try {
-            NativeQuery nativeQuery = session.createNativeQuery("SHOW TABLES LIKE 'user'");
+           // NativeQuery nativeQuery = session.createNativeQuery("SHOW TABLES LIKE 'user'");
+            //NativeQuery nativeQuery = session.createNativeQuery("from User");
 
-            boolean isUserTableExist = nativeQuery.uniqueResult() == null;
+
+            NativeQuery nativeQuery = session.createNativeQuery("SELECT COUNT(*) FROM User");
+            System.out.println("res:"+nativeQuery.uniqueResult());
+            //Object result = nativeQuery.uniqueResult();
+             Long result = (Long) nativeQuery.uniqueResult();
+
+
+            boolean isUserTableExist = result == 0;
 
             if (isUserTableExist) {
                 String hasedPass = PasswordUtil.hashPassword("1111");

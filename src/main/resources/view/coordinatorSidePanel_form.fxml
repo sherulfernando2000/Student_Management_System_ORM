@@ -22,7 +22,7 @@
                   <Insets left="60.0" right="60.0" />
                </VBox.margin>
             </ImageView>
-            <Label alignment="CENTER" prefHeight="45.0" prefWidth="269.0" text="Welcome Admin" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="269.0" text="Coordinator" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="30.0" />
                </font>

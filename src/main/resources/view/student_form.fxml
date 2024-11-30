@@ -69,7 +69,7 @@
       </TableView>
       <HBox layoutX="380.0" layoutY="305.0" prefHeight="42.0" prefWidth="670.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="100.0">
          <children>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="44.0" prefWidth="175.0" stylesheets="@../css/style.css" text="Save" textFill="WHITE">
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="44.0" prefWidth="175.0" styleClass="buttonFrom" stylesheets="@../css/style.css" text="Save" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -84,7 +84,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="42.0" prefWidth="176.0" stylesheets="@../css/style.css" text="update" textFill="WHITE">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="42.0" prefWidth="176.0" styleClass="buttonFrom" stylesheets="@../css/style.css" text="update" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -99,7 +99,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="145.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="42.0" prefWidth="178.0" stylesheets="@../css/style.css" text="Delete " textFill="WHITE">
+            <Button layoutX="145.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="42.0" prefWidth="178.0" styleClass="buttonFrom" stylesheets="@../css/style.css" text="Delete " textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -114,7 +114,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="280.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="42.0" prefWidth="179.0" stylesheets="@../css/style.css" text="Clear" textFill="WHITE">
+            <Button layoutX="280.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="42.0" prefWidth="179.0" styleClass="buttonFrom" stylesheets="@../css/style.css" text="Clear" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
